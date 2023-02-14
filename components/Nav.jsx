@@ -18,7 +18,7 @@ function Nav() {
       />
        <div className=" hidden lg:flex items-center space-x-10 text-2xl font-bold">
           {navItems.map((i) => (
-            <a href="/" className=" text-blue-forta cursor-pointer " >{i}</a>
+            <div key={i} href="/" className=" text-blue-forta cursor-pointer " >{i}</div>
           ))}
 
           <button className='rounded-full text-black bg-blue-forta mx-auto w-24 h-10 font-bold text-xs shadow-md shadow-blue-forta animate-pulse '>
