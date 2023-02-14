@@ -4,7 +4,7 @@ import { IoIosArrowDown } from 'react-icons/io';
 import Typed from 'react-typed';
 import  Image  from 'next/image';
 import { motion } from "framer-motion"
-function Hero() {
+function Hero({openModal}) {
   return (
     <section className='h-screen  pt-14  text-blue-forta relative overflow-hidden'>
         <motion.div
@@ -56,7 +56,7 @@ function Hero() {
       </motion.h2>
       <div className="w-full flex justify-center items-center space-x-3 " >
         <BiRightArrow className="text-blue-forta text-2xl " />
-      <button className="rounded-full text-black bg-blue-forta mx-auto w-28 h-10 font-bold text-sm shadow-md shadow-blue-forta animate-pulse " >
+      <button onClick={openModal} className="rounded-full text-black bg-blue-forta mx-auto w-28 h-10 font-bold text-sm shadow-md shadow-blue-forta animate-pulse " >
         GET IN TOUCH
       </button>
       <BiRightArrow className="text-blue-forta text-2xl rotate-180" />

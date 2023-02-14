@@ -2,7 +2,7 @@ import React from 'react'
 import Image  from 'next/image';
 import { motion } from 'framer-motion';
 
-function Services() {
+function Services({openModal}) {
     const services = [
         {
             title:"Smart Contract Development for NFT'S and Tokens",
@@ -46,13 +46,18 @@ function Services() {
                          whileInView={{ opacity: 1 }}
                          transition={{duration:0.8, delay:0.7}}
                         className='text-gray-forta text-center px-10 my-10 lg:px-0  lg:text-start lg:text-[20px] lg:my-[50px] lg:max-w-[550px] '>{text}</motion.p>
-                        <button className='mx-auto lg:mx-0 my-10 lg:my-0 w-[160px] h-[45px] rounded-full bg-blue-forta font-bold flex items-center justify-center shadow-md shadow-blue-forta animate-pulse ' >
+                        <button onClick={openModal} className='mx-auto lg:mx-0 my-10 lg:my-0 w-[160px] h-[45px] rounded-full bg-blue-forta font-bold flex items-center justify-center shadow-md shadow-blue-forta animate-pulse ' >
                             Get started
                         </button>
                     </div>
-                    <div className='flex-1 relative    mx-10 lg:mx-[100px]' >
+                    <motion.div
+                    initial={{ opacity: 0 , y: 200 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{duration:0.8, delay:0.3}}
+                    
+                    className='flex-1 relative    mx-10 lg:mx-[100px]' >
                         <Image src={img} className="object-contain" fill />
-                    </div>
+                    </motion.div>
                     
             </div>
         ))}

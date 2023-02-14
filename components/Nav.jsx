@@ -3,7 +3,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 import Image  from 'next/image';
 
-function Nav() {
+function Nav({openModal}) {
   const [open, setOpen] = useState(false);
 
   const navItems = ["Products", "Services", "Working-process"];
@@ -21,7 +21,7 @@ function Nav() {
             <div key={i} href="/" className=" text-blue-forta cursor-pointer " >{i}</div>
           ))}
 
-          <button className='rounded-full text-black bg-blue-forta mx-auto w-24 h-10 font-bold text-xs shadow-md shadow-blue-forta animate-pulse '>
+          <button onClick={openModal} className='rounded-full text-black bg-blue-forta mx-auto w-24 h-10 font-bold text-xs shadow-md shadow-blue-forta animate-pulse '>
             GET IN TOUCH
           </button>
         </div>
